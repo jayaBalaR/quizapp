@@ -14,7 +14,7 @@ if __name__ == "__main__":
 page_element="""
 <style>
 [data-testid="stAppViewContainer"]{
-  background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
+  background-image: url("https://i.imgur.com/pqyk82F.png");
   background-size: cover;
 }
 </style>
