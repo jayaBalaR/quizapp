@@ -16,19 +16,23 @@ st.markdown("""
 div.stButton > button:first-child {
     display: block;
     margin: 0 auto;
-</style>
-""", unsafe_allow_html=True)
 
-# Set the background image using a picture's URL
-page_bg_img = '''
-<style>
     .reportview-container {
         background: url("https://imgur.com/pqyk82F");
     }
 </style>
-'''
+""", unsafe_allow_html=True)
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# Set the background image using a picture's URL
+# page_bg_img = '''
+# <style>
+#     .reportview-container {
+#         background: url("https://imgur.com/pqyk82F");
+#     }
+# </style>
+# '''
+
+# st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
 default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False}
@@ -64,7 +68,7 @@ def next_question():
     st.session_state.answer_submitted = False
 
 # Title and description
-st.title("Streamlit Quiz App")
+st.title("Kids Quiz App")
 
 # Progress bar
 progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)
