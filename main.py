@@ -11,17 +11,16 @@ if __name__ == "__main__":
     run()
 
 # Custom CSS for the buttons
-st.markdown("""
+page_element="""
 <style>
-div.stButton > button:first-child {
-    display: block;
-    margin: 0 auto;
-
-    .reportview-container {
-        background: url("https://imgur.com/pqyk82F");
-    }
+[data-testid="stAppViewContainer"]{
+  background-image: url("https://cdn.wallpapersafari.com/88/75/cLUQqJ.jpg");
+  background-size: cover;
+}
 </style>
-""", unsafe_allow_html=True)
+"""
+
+st.markdown(page_element, unsafe_allow_html=True)
 
 # Set the background image using a picture's URL
 # page_bg_img = '''
