@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Who is the author of the Ramayana?",
+        "information": "This is a smriti text (also described as an Sanskrit epic) from ancient India, one of the two important epics of Hinduism known as the Itihasas ",
+        "options": ["Sage Valmiki", "Sage Vyasa", "Sant Tulsidas", "Poet Kalidasa"],
+        "answer": "Sage Valmiki"
+    },
+    {
+        "question": "What is the name of Lord Rama’s father?",
+        "information": "This is a smriti text (also described as an Sanskrit epic) from ancient India, one of the two important epics of Hinduism known as the Itihasas",
+        "options": ["King Dasharatha", "King Janaka", "Sage Vishwamitra", "Sage Vasishtha"],
+        "answer": "King Dasharatha"
+    },
+    {
+        "question": "Who is Sita’s father?",
+        "information": "This is a smriti text (also described as an Sanskrit epic) from ancient India, one of the two important epics of Hinduism known as the Itihasas",
+        "options": ["King Janaka", "King Dasharatha", "Maharishi Valmiki", "Ravana"],
+        "answer": "King Janaka"
+    },
+    {
+        "question": "Which demon king abducted Sita?",
+        "information": "",
+        "options": ["Kumbhakarna", "Vibhishana", "Ravana", "Maricha"],
+        "answer": "Ravana"
+    },
+    {
+        "question": "What is the name of Rama’s loyal devotee who is a monkey?",
+        "information": "",
+        "options": ["Sugriva", "Jambavan", "Hanuman", "Angada"],
+        "answer": "Hanuman"
+    },
+    {
+        "question": "Which weapon did Rama use to kill Ravana?",
+        "information": "",
+        "options": ["Sword", "Chakra", "Divine Bow and arrow", "Trident"],
+        "answer": "Divine Bow and arrow"
+    },
+    {
+        "question": "What is the name of the bridge built by the Vanara army to reach Lanka?",
+        "information": "The clue is its in Sri Lanka",
+        "options": ["Setu Bandha", "Ram Sethu", "Nala Sethu", "Vanara Sethu"],
+        "answer": "Ram Sethu"
+    },
+    {
+        "question": "Who was the brother of Ravana that helped Rama?",
+        "information": "",
+        "options": ["Kumbhakarna", "Indrajit", "Vibhishana", "Akshayakumara"],
+        "answer": "Vibhishana"
+    },
+    {
+        "question": "What is the name of Rama’s kingdom?",
+        "information": "This was a famous place in whole of India a celebration that happened at this place in India on Jan 22 2024",
+        "options": ["Mithila", "Ayodhya", "Dandakaranya", "Kishkindha"],
+        "answer": "Ayodhya"
+    },
+    {
+        "question": "Who gave Rama the advice to pray to the sun god before the battle with Ravana?",
+        "information": "",
+        "options": ["Sage Agastya", "Sage Vishwamitra", "Sage Vashishta", "Sage Atri"],
+        "answer": "Sage Vishwamitra"
+    }
+]
