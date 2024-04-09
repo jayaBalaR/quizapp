@@ -67,6 +67,10 @@ def next_question():
     st.session_state.selected_option = None
     st.session_state.answer_submitted = False
 
+def submit_details():
+    with open("scores.json", "w") as outfile:
+        outfile.write(json_object)
+
 # Title and description
 st.title("Kids Quiz App")
 
@@ -119,10 +123,10 @@ if st.session_state.answer_submitted:
         data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": result}
         # Serializing json
         json_object = json.dumps(data, indent=4)
+        st.button('Student Submit', on_click=submit_details)
  
         # Writing to sample.json
-        with open("scores.json", "w") as outfile:
-            outfile.write(json_object)
+
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
