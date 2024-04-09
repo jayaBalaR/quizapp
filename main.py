@@ -110,11 +110,11 @@ if st.session_state.answer_submitted:
     else:
         st.write(f"**Quiz completed! Your score is: {st.session_state.score} / {len(quiz_data) * 10}**")
         
-        name = st.text_input("Enter your name")
-        school = st.text_input("Enter your school")
-        s_class = st.text_input("Enter your class in Roman Numerals(I-X)")
-        age = st.text_input("Enter your age in years")
-        data = {"Name": name, "Age": age, "School": school, "Class": s_class}
+        name = st.text_area("Enter your name")
+        school = st.text_area("Enter your school")
+        s_class = st.text_area("Enter your class in Roman Numerals(I-X)")
+        age = st.number_input('Enter your age in years and months')
+        data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": {st.session_state.score} / {len(quiz_data) * 10}}
         df = pd. DataFrame(data)
         output_file = "output.xlsx"
         df.to_excel(output_file, index=False)
