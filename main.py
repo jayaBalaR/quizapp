@@ -118,8 +118,8 @@ if st.session_state.answer_submitted:
         age = st.number_input('Enter your age in years and months')
         data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": result}
         df = pd. DataFrame([data])
-        output_file = "scores.xlsx"
-        df.to_excel(output_file, index=False)
+        output_file = "scores.json"
+        result = df.to_json(path= output_file, orient="records")
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
