@@ -1,0 +1,20 @@
+[
+    {
+        "question": "What is Anthill called in sanskrit?",
+        "information": "",
+        "options": ["Valmika", "Parvata", "nadi", "akasha"],
+        "answer": "Valmika"
+    },
+    {
+        "question": "Ayodhya is on the banks of which river?",
+        "information": "",
+        "options": ["River Narmada", "River Brahmaputra", "River Yamuna", "River Sarayu"],
+        "answer": "River Sarayu"
+    },
+    {
+        "question": "What is the name of this manvantara?",
+        "information": "Each manvantara lasts for 306,720,000 years (852,000 divine years; 1 divine year = 360 solar years) and repeats seventy-one Yuga Cycles (world ages).",
+        "options": ["vaivasvatamanvantara", "swayambhu", "chakshusha", "raivata"],
+        "answer": "vaivasvatamanvantara"
+    }
+]
