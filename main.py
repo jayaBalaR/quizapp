@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-import pandas as pd
+
 
 def run():
     st.set_page_config(
@@ -117,9 +117,12 @@ if st.session_state.answer_submitted:
         s_class = st.text_area("Enter your class in Roman Numerals(I-X)")
         age = st.number_input('Enter your age in years and months')
         data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": result}
-        df = pd. DataFrame([data])
-        output_file = "scores.json"
-        result = df.to_json(path= output_file, orient="records")
+        # Serializing json
+        json_object = json.dumps(data, indent=4)
+ 
+        # Writing to sample.json
+        with open("scores.json", "w") as outfile:
+            outfile.write(json_object)
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
