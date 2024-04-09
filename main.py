@@ -34,7 +34,7 @@ st.markdown(page_element, unsafe_allow_html=True)
 # st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
-default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False}
+default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False, 'name':'','school':'', 's_class':'', 'age':0}
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
@@ -80,6 +80,7 @@ st.subheader(f"Question {st.session_state.current_index + 1}")
 st.title(f"**{question_item['question']}**")
 st.write(question_item['information'])
 
+
 st.markdown(""" ___""")
 
 # Answer selection
@@ -108,6 +109,15 @@ if st.session_state.answer_submitted:
         st.button('Next', on_click=next_question)
     else:
         st.write(f"**Quiz completed! Your score is: {st.session_state.score} / {len(quiz_data) * 10}**")
+        
+        name = st.text_input("Enter your name")
+        school = st.text_input("Enter your school")
+        s_class = st.text_input("Enter your class in Roman Numerals(I-X)")
+        age = st.text_input("Enter your age in years")
+        data = {"Name": name, "Age": age, "School": school, "Class": s_class}
+        df = pd. DataFrame(data)
+        output_file = "output.xlsx"
+        df.to_excel(output_file, index=False)
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
