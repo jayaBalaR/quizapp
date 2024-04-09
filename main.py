@@ -114,10 +114,10 @@ if st.session_state.answer_submitted:
         school = st.text_area("Enter your school")
         s_class = st.text_area("Enter your class in Roman Numerals(I-X)")
         age = st.number_input('Enter your age in years and months')
-        data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": {st.session_state.score} / {len(quiz_data) * 10}}
-        df = pd. DataFrame(data)
-        output_file = "output.xlsx"
-        df.to_excel(output_file, index=False)
+        #data = {"Name": name, "Age": age, "School": school, "Class": s_class, "score": {st.session_state.score} / {len(quiz_data) * 10}}
+        #df = pd. DataFrame(data)
+        #output_file = "output.xlsx"
+        #df.to_excel(output_file, index=False)
         if st.button('Restart', on_click=restart_quiz):
             pass
 else:
