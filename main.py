@@ -1,6 +1,5 @@
 import streamlit as st
 import json
-from streamlit_gsheets import GSheetsConnection
 
 def run():
     st.set_page_config(
@@ -76,10 +75,7 @@ def submit_details():
 
 # Title and description
 st.title("Kids Quiz App")
-# Create a connection object.
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
 
-df = conn.read()
 
 # Progress bar
 progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)
