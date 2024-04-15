@@ -1,6 +1,6 @@
 import streamlit as st
 import json
-
+from streamlit_gsheets import GSheetsConnection
 
 def run():
     st.set_page_config(
@@ -68,11 +68,18 @@ def next_question():
     st.session_state.answer_submitted = False
 
 def submit_details():
-    with open("scores.json", "w") as outfile:
-        outfile.write(json_object)
+    # with open("scores.json", "w") as outfile:
+    #     outfile.write(json_object)
+    # Print results.
+    for row in df.itertuples():
+        st.write(f"{row.name} has a :{row.pet}:")
 
 # Title and description
 st.title("Kids Quiz App")
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+df = conn.read()
 
 # Progress bar
 progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)
