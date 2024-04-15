@@ -77,7 +77,7 @@ def submit_details():
 # Title and description
 st.title("Kids Quiz App")
 # Create a connection object.
-conn = st.connection("gsheets", type=GSheetsConnection)
+conn = st.experimental_connection("gsheets", type=GSheetsConnection)
 
 df = conn.read()
 
