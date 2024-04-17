@@ -98,7 +98,7 @@ def submit_details():
         c.execute("COMMIT")
         print("record added successfully")
         c.close()
-    except Exception ex:
+    except Exception as ex:
         print("Exception occurred while submitting details!")
         print(f"Error: {ex}")
     return
