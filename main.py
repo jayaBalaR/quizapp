@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import sqlite3
 
 def run():
     st.set_page_config(
@@ -38,6 +39,27 @@ default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'select
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
+# Connect to the database
+conn = sqlite3.connect('my.db')
+
+c = conn.cursor()
+
+sql_create_students_table = """
+CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY autoincrement,
+    name TEXT NOT NULL,
+    school TEXT,
+    class TEXT,
+    age INTEGER,
+    score INTEGER
+);
+
+c.execute(sql_create_students_table)
+
+conn.commit()
+conn.close()
+"""
+
 # Load quiz data
 with open('question_answers_dict.json', 'r', encoding='utf-8') as f:
     quiz_data = json.load(f)
@@ -67,11 +89,22 @@ def next_question():
     st.session_state.answer_submitted = False
 
 def submit_details():
-    # with open("scores.json", "w") as outfile:
-    #     outfile.write(json_object)
-    # Print results.
-    for row in df.itertuples():
-        st.write(f"{row.name} has a :{row.pet}:")
+    try:
+        conn = sqlite3.connect('my.db')
+        c = conn.cursor()
+        insertStatement = "INSERT INTO Students values(name , school , s_class, age, result)"
+        c = conn.cursor()
+        c.execute(insertStatement)
+        c.execute("COMMIT")
+        print("record added successfully")
+        c.close()
+    except Exception ex:
+        print("Exception occurred while submitting details!")
+        print(f"Error: {ex}")
+    return
+
+    
+    
 
 # Title and description
 st.title("Kids Quiz App")
